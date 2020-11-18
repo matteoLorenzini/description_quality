@@ -44,9 +44,27 @@ if __name__ == "__main__":
         print("Cross-validating on iteration {}".format(i_str))
 
         start = time()
-        model = fasttext.train_supervised(input=train_file, lr=1.0, epoch=100,
-                                  wordNgrams=2, bucket=200000, dim=50, loss='hs')
 
+    #Default embeddings
+
+        model = fasttext.train_supervised(input=train_file,
+                                   lr=1.0,
+                                   epoch=100,
+                                   wordNgrams=2,
+                                   bucket=200000,
+                                   dim=50,
+                                   loss='hs')
+
+'''      
+    #Pre-trained embeddings wikipedia uncomment to use
+
+        model = fasttext.train_supervised(
+                                input=train_file,
+                                lr=1.0, epoch=100,
+                                wordNgrams=2, bucket=200000, dim=300, loss='hs',
+                                pretrainedVectors='cc_300.vec')
+
+'''    
         print("Training time: {}".format(time()-start))
         start = time()
         with open(test_file, 'r') as f:
