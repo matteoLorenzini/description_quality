@@ -32,16 +32,16 @@ print(X.astype(float).to_numpy())
 print(X)
 #exit()
 start = time()
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2,random_state=0)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2,random_state=42,stratify=y)
 
-
+'''
 #PCA decomposition 50 dimension
 pca = decomposition.PCA(n_components=50)
 pca.fit(X)
 X = pca.transform(X)
 
 ###end decomposition####
-
+'''
 
 
 
