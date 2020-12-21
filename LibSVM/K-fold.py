@@ -42,6 +42,8 @@ print(y.shape)
 X = pd.DataFrame([dict(y.split(':') for y in x.split()) for x in df['vector']])
 print(X.astype(float).to_numpy())
 
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2,random_state=42,stratify=y)
+
 #PCA decomposition 50 dimension
 pca = decomposition.PCA(n_components=50)
 pca.fit(X)
@@ -58,16 +60,7 @@ clf = svm.SVC(kernel='rbf',
 
 print("K-Folds scores:")
 
-'''
-def classification_report_with_accuracy_score(y_true, y_pred):
 
-    print (classification_report(y_true, y_pred)) # print classification report
-    return accuracy_score(y_true, y_pred) # return accuracy score
-
-scores = cross_val_score(clf, X, y, cv=10, \
-    scoring=make_scorer(classification_report_with_accuracy_score))
-print (scores)
-'''
 originalclass = []
 predictedclass = []
 
@@ -78,7 +71,7 @@ def classification_report_with_accuracy_score(y_true, y_pred):
     return accuracy_score(y_true, y_pred)  # return accuracy score
 
 
-inner_cv = StratifiedKFold(n_splits=10)
+#inner_cv = StratifiedKFold(n_splits=10)
 outer_cv = StratifiedKFold(n_splits=10)
 
 
