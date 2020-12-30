@@ -46,7 +46,7 @@ from sklearn.linear_model import RidgeCV
 from sklearn.metrics import classification_report
 
 #dataset train
-train_set = pd.read_csv ('total/total/train0.005.csv',sep=',',names=['descriptions', 'label_','domain'])
+train_set = pd.read_csv ('total/train.csv',sep=',',names=['descriptions', 'label_','domain'])
 
 df_train = pd.DataFrame(train_set)
 
@@ -59,7 +59,7 @@ print(dfTrain)
 
 
 #dataset test
-test_set = pd.read_csv ('total/total/test.csv',sep=',',names=['descriptions', 'label_','domain'])
+test_set = pd.read_csv ('total/test.csv',sep=',',names=['descriptions', 'label_','domain'])
 
 df_test = pd.DataFrame(test_set)
 
@@ -72,10 +72,10 @@ print(dfTest)
 
 
 dfTest.to_csv('test_label.csv', index = False, header=False, sep=" ", quoting=csv.QUOTE_NONE, escapechar=" ")
-dfTrain.to_csv('train0.005.csv', index = False, header=False, sep=" ", quoting=csv.QUOTE_NONE, escapechar=" ")
+dfTrain.to_csv('train_label.csv', index = False, header=False, sep=" ", quoting=csv.QUOTE_NONE, escapechar=" ")
 
 
-train_file = 'train0.005.csv'
+train_file = 'train_label.csv'
 
 test_file = 'test_label.csv' 
 
