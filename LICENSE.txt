@@ -1,7 +1,7 @@
 
- The dataset in this repo is developed  (c) by the Fondazione Bruno Kessler of Trento (FBK), University of Verona, Institute for the History and Theory of Architecture, gta digital, ETH Zurich
+ The content of this repository is developed  (c) by the Fondazione Bruno Kessler of Trento (FBK), University of Verona, Institute for the History and Theory of Architecture, gta digital, ETH Zurich
 
-The datset licensed under a
+The content of this repository is licensed under a
 Creative Commons Attribution-ShareAlike 4.0 International License.
 
 
