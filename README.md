@@ -9,7 +9,8 @@ in cultural heritage records.
 * [ScikitLearn](https://scikit-learn.org/stable/index.html)
 * [Wikipedia Embeddings](https://fasttext.cc/docs/en/pretrained-vectors.html)
 * [Annotated dataset](https://figshare.com/articles/dataset/Annotated_dataset_to_assess_the_accuracy_of_the_textual_description_of_cultural_heritage_records/13359104)
-
+* [Matplotlib](https://matplotlib.org/)
+* [Seaborn](https://seaborn.pydata.org/)
 ## Dependencies 
 
 * Python3
@@ -31,4 +32,7 @@ in cultural heritage records.
 	* [K-fold.py](https://github.com/matteoLorenzini/description_quality/blob/master/LibSVM/K-fold.py)
 		* runs the K-foldvalidation on the .tsv created by the [converter.py](https://github.com/matteoLorenzini/description_quality/blob/master/converter.py)
 * learning_curve folder:
-	* 
+	* [estimator.py](https://github.com/matteoLorenzini/description_quality/blob/master/learning_curve/estimator.py)
+		* computes the F1 score by using different splits 
+	* [learning_curve.py](https://github.com/matteoLorenzini/description_quality/blob/master/learning_curve/learning_curve.py)
+		* plot the learning curve
